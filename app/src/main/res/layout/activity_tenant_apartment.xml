@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--taTxt0 => Tenant Apartment TextView0  -->
+    <TextView
+        android:id="@+id/taTxt0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="Location:"/>
+
+    <Spinner
+        android:id="@+id/taLocationSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/taTxt0"
+        android:layout_marginLeft="5dp">
+
+    </Spinner> <!-- android:prompt="@string/location_prompt"
+        android:entries="@array/location_array" -->
+
+    <TextView
+        android:id="@+id/line0"
+        style="?android:listSeparatorTextViewStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/taLocationSpinner"/>
+
+    <TextView
+        android:id="@+id/taTxt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line0"
+        android:text="Montly Rental Rate:"
+        android:layout_marginLeft="5dp"/>
+
+    <EditText
+        android:id="@+id/rentStartET"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/taTxt1"
+        android:layout_marginLeft="5dp"/>
+
+    <TextView
+        android:id="@+id/taTxt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/rentStartET"
+        android:layout_below="@+id/taTxt1"
+        android:layout_marginTop="15dp"
+        android:text=" To "/>
+
+    <EditText
+        android:id="@+id/rentEndEt"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/taTxt2"
+        android:layout_below="@+id/taTxt1"/>
+
+    <TextView
+        android:id="@+id/taTxt6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/rentEndEt"
+        android:layout_below="@+id/taTxt1"
+        android:layout_marginTop="15dp"
+        android:text=" $ "/>
+
+    <!-- Below code segment will draw horizontal line on the screen -->
+    <TextView
+        android:id="@+id/line1"
+        style="?android:listSeparatorTextViewStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rentStartET"/>
+
+    <TextView
+        android:id="@+id/taTxt3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Period of stay:"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@+id/line1"/>
+
+    <EditText
+        android:id="@+id/startDateET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:editable="false"
+        android:hint="Start Date"
+        android:focusable="false"
+        android:layout_below="@+id/taTxt3"
+        android:layout_marginLeft="5dp"/>
+
+    <TextView
+        android:id="@+id/taTxt4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/taTxt3"
+        android:text=" To "
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/startDateET"/>
+
+    <EditText
+        android:id="@+id/endDateET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:editable="false"
+        android:hint="End Date"
+        android:focusable="false"
+        android:layout_below="@+id/taTxt3"
+        android:layout_toRightOf="@+id/taTxt4"/>
+
+    <TextView
+        android:id="@+id/line2"
+        style="?android:listSeparatorTextViewStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/startDateET"/>
+
+    <TextView
+        android:id="@+id/taTxt5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Number of Bed-Rooms:"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@+id/line2"/>
+
+    <Spinner
+        android:id="@+id/taBedroomSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/taTxt5"
+        android:layout_marginLeft="5dp"
+        android:prompt="@string/bedroom_prompt"
+        android:entries="@array/bedroom_array"></Spinner>
+
+    <Button
+        android:id="@+id/cancelBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/startDateET"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="250dp"
+        android:text="Cancel"/>
+
+    <Button
+        android:id="@+id/searchBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/startDateET"
+        android:layout_toRightOf="@+id/cancelBtn"
+        android:text="Search"
+        android:layout_marginLeft="230dp"
+        android:layout_marginTop="250dp"
+        />
+    </RelativeLayout>
