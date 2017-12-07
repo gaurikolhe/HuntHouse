@@ -1,0 +1,40 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#c1ecec"
+    tools:context="com.project.hunthouse.View.Gallery_fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/challenges_frame">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/imageRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:text="Choose Image"
+            android:id="@+id/choose_image_upload"
+            android:textColor="#fafafa"
+            android:layout_height="60dp"
+            android:background="@android:drawable/dialog_holo_dark_frame"
+            android:layout_above="@+id/photoBox_image_upload"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:text="Upload Image"
+            android:layout_height="60dp"
+            android:textColor="#fafafa"
+            android:id="@+id/photoBox_image_upload"
+            android:background="@android:drawable/dialog_holo_dark_frame"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+
+</FrameLayout>
