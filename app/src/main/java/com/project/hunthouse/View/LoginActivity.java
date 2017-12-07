@@ -29,11 +29,6 @@ import com.project.hunthouse.R;
 
 //import com.venyou.venyou.R;
 
-/**
- * Created by Nikhil on 11/5/2017.
- */
-
-
 public class LoginActivity extends AppCompatActivity {
 
     EditText userName;
@@ -64,7 +59,8 @@ public class LoginActivity extends AppCompatActivity {
                 if(user!=null){
                     //user signed in
                     Log.d("AuthState","onAuthStateChanged: user signed in:"+user.getUid());
-                    Intent myIntent = new Intent(LoginActivity.this, Home.class);  //Replace MainActivity.class with your launcher class from previous assignments
+                    //Intent myIntent = new Intent(LoginActivity.this, Home.class);  //Replace MainActivity.class with your launcher class from previous assignments
+                    Intent myIntent = new Intent(LoginActivity.this, MainActivity.class);
                     String name = user.getDisplayName();
                     String email = user.getEmail();
                     String id = user.getUid();
