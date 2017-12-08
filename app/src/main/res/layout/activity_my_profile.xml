@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/home"
     tools:context="com.project.hunthouse.View.MyProfile">
 
     <android.support.design.widget.AppBarLayout
@@ -32,7 +33,7 @@
             android:layout_centerHorizontal="true"
             android:layout_alignParentTop="true"
             android:text="Name :"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:layout_marginTop="20dp"
             android:padding="15dp"
             android:paddingTop="40dp"
@@ -45,7 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/profile_name"
             android:layout_centerHorizontal="true"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:text="City :"
             android:padding="15dp"
             android:textSize="25dp" />
