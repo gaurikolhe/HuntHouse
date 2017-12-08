@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:transitionName="ActivityTransition"
-    android:background="#c1ecec"
+    android:background="#8c8c8c"
     tools:context="com.project.hunthouse.View.EventDetails">
 
     <android.support.design.widget.AppBarLayout

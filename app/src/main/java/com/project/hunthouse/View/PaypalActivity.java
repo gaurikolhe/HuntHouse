@@ -18,7 +18,7 @@ public class PaypalActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_paypal);
 
-        data = "gkolhe@syr.edu";
+        data = "gaurikolhe1993@gmail.com";
         WebView webView;
         setContentView(R.layout.webviewlayout);
         webView = (WebView)findViewById(R.id.help_webview);

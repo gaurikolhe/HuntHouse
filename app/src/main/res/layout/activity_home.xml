@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:background="#8c8c8c"
     tools:openDrawer="start">
 
     <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -14,7 +15,7 @@
         android:id="@+id/main_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#c1ecec"
+        android:background="#8c8c8c"
         tools:context="com.venyou.venyou.View.Home">
 
         <android.support.design.widget.AppBarLayout
@@ -22,6 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="@dimen/appbar_padding_top"
+            android:background="#4d4d4d"
             android:theme="@style/AppTheme.AppBarOverlay">
 
             <android.support.v7.widget.Toolbar
@@ -41,19 +43,13 @@
                     android:id="@+id/tabItem"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Event List" />
+                    android:text="Availiable Houses" />
 
                 <android.support.design.widget.TabItem
                     android:id="@+id/tabItem2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Attended Events" />
-
-                <android.support.design.widget.TabItem
-                    android:id="@+id/tabItem3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Live Chat" />
+                    android:text="My Favourite Houses" />
 
             </android.support.design.widget.TabLayout>
         </android.support.design.widget.AppBarLayout>
