@@ -62,12 +62,24 @@
             android:src="@drawable/ic_launcher_background"/>
 
         <Button
+            android:id="@+id/take_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/profile_image"
-            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="70dp"
+            android:text="Take Image"/>   <!-- android:layout_centerHorizontal="true" -->
+
+        <Button
+            android:id="@+id/choose_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_image"
+            android:layout_toRightOf="@+id/take_image"
+            android:layout_marginLeft="20dp"
             android:text="Choose Image"
-            android:onClick="chooseImage"/>
+            android:onClick="chooseImage"/> <!-- android:layout_centerHorizontal="true" -->
+
+
 
         <Button
             android:layout_width="match_parent"
