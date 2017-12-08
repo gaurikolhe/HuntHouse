@@ -67,7 +67,7 @@ public class LiveCommentFirebaseAdaptar extends FirebaseRecyclerAdapter<Image, L
         private Bundle bundle = new Bundle();
         public EventViewHolder(View v) {
             super(v);
-            textView = v.findViewById(R.id.commentsView);
+            textView = (TextView) v.findViewById(R.id.commentsView);
             container = v.findViewById(R.id.list_item_layout);
 //
 //            // by this we are just registering the click Event on the whole view i.e. view in our case
