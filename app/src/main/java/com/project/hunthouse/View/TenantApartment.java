@@ -18,11 +18,11 @@ import java.util.Locale;
 
 public class TenantApartment extends AppCompatActivity implements View.OnClickListener{
 
-    EditText startDate,endDate,startPrice,endPrice;
+    EditText startDate,endDate,startPrice,endPrice,location;
     Calendar myCalendar;
     DatePickerDialog.OnDateSetListener date;
     Button cancel,search;
-    Spinner location,bedRooms;
+    Spinner bedRooms;
     Intent intent;
     String selectedLocation,selectedStartDate,selectedEndDate,selectedStartPrice,selectedEndPrice,selectedBedRooms;
     Bundle bundle;
@@ -47,7 +47,7 @@ public class TenantApartment extends AppCompatActivity implements View.OnClickLi
         endPrice  = (EditText) findViewById(R.id.rentEndEt);
         cancel    = (Button) findViewById(R.id.cancelBtn);
         search    = (Button) findViewById(R.id.searchBtn);
-        location = (Spinner) findViewById(R.id.taLocationSpinner);
+        location = (EditText) findViewById(R.id.taLocationSpinner);
         bedRooms = (Spinner) findViewById(R.id.taBedroomSpinner);
 
         startDate.setOnClickListener(this);
@@ -108,7 +108,7 @@ public class TenantApartment extends AppCompatActivity implements View.OnClickLi
                 break;
             case R.id.searchBtn:
 
-                selectedLocation  = location.getSelectedItem().toString();
+                selectedLocation  = location.getText().toString();
                 selectedStartPrice = startPrice.getText().toString();
                 selectedEndPrice = endPrice.getText().toString();
                 selectedStartDate = startDate.getText().toString();

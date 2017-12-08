@@ -20,14 +20,15 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:textStyle="bold"
-            android:text="Location:"/>
+            android:text="City:"/>
 
         <EditText
             android:id="@+id/osrLocationSpinner"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/osrTxt0"
-            android:layout_marginLeft="30dp"></EditText>
+            android:layout_marginLeft="30dp"
+            android:maxLength="30"></EditText>
         <!--
             android:prompt="@string/location_prompt"
             android:entries="@array/location_array"  -->
@@ -68,6 +69,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/osrTxt1"
             android:layout_marginLeft="30dp"
+            android:maxLength="10"
             android:hint="Enter the amount"
             android:layout_toRightOf="@+id/verticalLine0"/> <!--  -->
 

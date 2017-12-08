@@ -43,6 +43,8 @@ public class OwnerSingleRoom extends AppCompatActivity implements View.OnClickLi
     Intent intent;
     int flag=-1;
 
+    String uname,uid,url,uemail;
+
    // HouseData houseData = new HouseData();
     HashMap newHouse = new HashMap<>();
 
@@ -50,6 +52,11 @@ public class OwnerSingleRoom extends AppCompatActivity implements View.OnClickLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_owner_single_room);
+
+        uname = getIntent().getExtras().getString("name");
+        uemail = getIntent().getExtras().getString("email");
+        uid = getIntent().getExtras().getString("id");
+
 
         myCalendar = Calendar.getInstance();
 
@@ -126,6 +133,9 @@ public class OwnerSingleRoom extends AppCompatActivity implements View.OnClickLi
                 break;
             case R.id.cancelBtn:
                 intent = new Intent(OwnerSingleRoom.this,MainActivity.class);
+                intent.putExtra("name",uname);
+                intent.putExtra("id",uid);
+                intent.putExtra("email",uemail);
                 startActivity(intent);
                 break;
             case R.id.osrCameraImgBtn:

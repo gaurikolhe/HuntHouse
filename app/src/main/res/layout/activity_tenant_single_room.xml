@@ -19,7 +19,8 @@ android:layout_height="match_parent">
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tsrTxt0"
-        android:layout_marginLeft="5dp"></EditText>
+        android:layout_marginLeft="5dp"
+        android:maxLength="30"></EditText>
     <!-- android:prompt="@string/location_prompt"
         android:entries="@array/location_array" -->
 

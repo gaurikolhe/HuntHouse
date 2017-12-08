@@ -67,11 +67,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         propic = (ImageView) view.findViewById(R.id.imageView);
 
 
-
-
-
-
-
         tenantOwner = (Switch) findViewById(R.id.tenant_owner_switch);
 
 
@@ -244,11 +239,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 case R.id.single_roomBtn:
                     Toast.makeText(this,"This is Owner with single room", Toast.LENGTH_LONG).show();
                     intent = new Intent(MainActivity.this,OwnerSingleRoom.class);
+                    intent.putExtra("name",uname);
+                    intent.putExtra("id",uid);
+                    intent.putExtra("email",uemail);
                     startActivity(intent);
                     break;
                 case R.id.apartmentBtn:
                     Toast.makeText(this,"This is Owner with apartment", Toast.LENGTH_LONG).show();
                     intent = new Intent(MainActivity.this,OwnerApartment.class);
+                    intent.putExtra("name",uname);
+                    intent.putExtra("id",uid);
+                    intent.putExtra("email",uemail);
                     startActivity(intent);
                     break;
             }

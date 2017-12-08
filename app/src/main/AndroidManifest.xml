@@ -57,6 +57,10 @@
         <activity android:name="com.project.hunthouse.View.MainActivity" android:theme="@style/NoActionBar"/>
         <activity android:name="com.project.hunthouse.View.tenantSingleRoom" />
         <activity android:name="com.project.hunthouse.View.TenantApartment" />
+
+        <activity android:name="com.project.hunthouse.View.OwnerSingleRoom" />
+        <activity android:name="com.project.hunthouse.View.OwnerApartment"></activity>
+
         <!--
            The API key for Google Maps-based APIs is defined as a string resource.
            (See the file "res/values/google_maps_api.xml").

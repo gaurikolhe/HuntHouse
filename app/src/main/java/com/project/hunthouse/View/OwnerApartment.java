@@ -43,6 +43,8 @@ public class OwnerApartment extends AppCompatActivity implements View.OnClickLis
     Intent intent;
     int flag=-1;
 
+    String uname,uid,url,uemail;
+
     //HouseData houseData = new HouseData();
     HashMap newHouse = new HashMap<>();
 
@@ -50,6 +52,11 @@ public class OwnerApartment extends AppCompatActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_owner_apartment);
+
+        uname = getIntent().getExtras().getString("name");
+        uemail = getIntent().getExtras().getString("email");
+        uid = getIntent().getExtras().getString("id");
+
 
         myCalendar = Calendar.getInstance();
 
@@ -127,6 +134,9 @@ public class OwnerApartment extends AppCompatActivity implements View.OnClickLis
                 break;
             case R.id.cancelBtn:
                 intent = new Intent(OwnerApartment.this,MainActivity.class);
+                intent.putExtra("name",uname);
+                intent.putExtra("id",uid);
+                intent.putExtra("email",uemail);
                 startActivity(intent);
                 break;
             case R.id.oaCameraImgBtn:
