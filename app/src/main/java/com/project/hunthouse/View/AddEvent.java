@@ -84,8 +84,8 @@ public class AddEvent extends AppCompatActivity {
     public void addEvent(View view){
 
         final EventData eventData = new EventData();
-        event.clear();
-        if(host_text.getText().toString().equals("") || description_text.getText().toString().equals("") ||street_text.getText().toString().equals("") ||fee_text.getText().toString().equals("") || name_text.getText().toString().equals("") || city_text.getText().toString().equals("") || state_text.getText().toString().equals("") || venue_text.getText().toString().equals("") || imageUri == null){
+        event.clear();                                                                        //|| venue_text.getText().toString().equals("")
+        if(host_text.getText().toString().equals("") || description_text.getText().toString().equals("") ||street_text.getText().toString().equals("") ||fee_text.getText().toString().equals("") || name_text.getText().toString().equals("") || city_text.getText().toString().equals("") || state_text.getText().toString().equals("") || imageUri == null){
             Toast.makeText(getApplicationContext(),"Please fill all the fields and select and image",Toast.LENGTH_SHORT).show();
         }else{
 
@@ -112,7 +112,7 @@ public class AddEvent extends AppCompatActivity {
             event.put("name",name_text.getText().toString());
             event.put("city", city_text.getText().toString());
             event.put("state", state_text.getText().toString());
-            event.put("venue", venue_text.getText().toString());
+            event.put("venue", name_text.getText().toString());
             event.put("id",name_text.getText().toString());
             event.put("description",description_text.getText().toString());
             event.put("host_name",host_text.getText().toString());

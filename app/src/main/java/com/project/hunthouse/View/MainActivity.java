@@ -235,7 +235,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             {
                 case R.id.single_roomBtn:
                     Toast.makeText(this,"This is Owner with single room", Toast.LENGTH_LONG).show();
-                    intent = new Intent(MainActivity.this,OwnerSingleRoom.class);
+                    //intent = new Intent(MainActivity.this,OwnerSingleRoom.class);
+                    intent = new Intent(MainActivity.this,AddEvent.class);
                     intent.putExtra("name",uname);
                     intent.putExtra("id",uid);
                     intent.putExtra("email",uemail);
@@ -243,7 +244,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     break;
                 case R.id.apartmentBtn:
                     Toast.makeText(this,"This is Owner with apartment", Toast.LENGTH_LONG).show();
-                    intent = new Intent(MainActivity.this,OwnerApartment.class);
+                    //intent = new Intent(MainActivity.this,OwnerApartment.class);
+                    intent = new Intent(MainActivity.this,AddEvent.class);
                     intent.putExtra("name",uname);
                     intent.putExtra("id",uid);
                     intent.putExtra("email",uemail);
