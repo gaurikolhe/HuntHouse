@@ -16,6 +16,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -34,8 +35,8 @@ import com.squareup.picasso.Picasso;
 import java.util.HashMap;
 
 import com.project.hunthouse.R;
-
-public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,Home_fragment.InterfaceEventData,Attending_fragment.InterfaceAttendEventData, LiveChatFragment.OnFragmentInteractionListener{
+                                                        //NavigationView.OnNavigationItemSelectedListener,
+public class Home extends AppCompatActivity implements Home_fragment.InterfaceEventData,Attending_fragment.InterfaceAttendEventData, LiveChatFragment.OnFragmentInteractionListener{
 
     private SectionsPagerAdapter mSectionsPagerAdapter;
     private ViewPager mViewPager;
@@ -44,10 +45,24 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     private DatabaseReference mRef;
     FloatingActionButton chat,addEvent;
 
+    //Vishal
+    String selectedLocation,selectedStartDate,selectedEndDate,selectedStartPrice,selectedEndPrice,selectedBedRooms;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        selectedLocation = getIntent().getExtras().getString("selectedLocation");
+        selectedStartDate = getIntent().getExtras().getString("selectedStartDate");
+        selectedEndDate = getIntent().getExtras().getString("selectedEndDate");
+        selectedStartPrice = getIntent().getExtras().getString("selectedStartPrice");
+        selectedEndPrice = getIntent().getExtras().getString("selectedEndPrice");
+        if(getIntent().getExtras().getBoolean("apartmentFlag"))
+        {
+            selectedBedRooms = getIntent().getExtras().getString("selectedBedRooms");
+            Log.d("SearchResult:","BedRooms="+selectedBedRooms);
+        }
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -62,6 +77,8 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
 
+        //As, we don't want to show navigation drawer on this screen
+        /*
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -77,7 +94,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         View view = (View)navigationView.getHeaderView(0);
         TextView textView_name = (TextView) view.findViewById(R.id.textView_name);
         textView_name.setText(uname);
-        propic = (ImageView) view.findViewById(R.id.imageView);
+        propic = (ImageView) view.findViewById(R.id.imageView); */
 
         chat = (FloatingActionButton) findViewById(R.id.chat_fbutton);
         chat.setOnClickListener(new View.OnClickListener() {
@@ -113,6 +130,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 HashMap<String,String> event = (HashMap<String,String>)dataSnapshot.getValue();
+                /*
                 url = event.get("pic");
                 if(url!= null){
                     Picasso.with(getApplicationContext())
@@ -123,7 +141,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                     Picasso.with(getApplicationContext())
                             .load(url)
                             .into(propic);
-                }
+                } */
             }
             @Override
             public void onCancelled(DatabaseError databaseError) {
@@ -134,16 +152,20 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
     @Override
     public void onBackPressed() {
+        /*
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-        }else if (getFragmentManager().getBackStackEntryCount() > 0) {
+        }else */
+        if (getFragmentManager().getBackStackEntryCount() > 0) {
             getFragmentManager().popBackStack();
         }else {
             super.onBackPressed();
         }
     }
 
+
+    /*
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -179,6 +201,9 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         return true;
     }
 
+    */
+
+    /*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_home, menu);
@@ -202,7 +227,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         }
 
         return super.onOptionsItemSelected(item);
-    }
+    } */
 
     @Override
     public void DisplayEventData(int position, HashMap<String, ?> eventDetails, View view, String name) {
@@ -275,7 +300,15 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:{
-                    return Home_fragment.newInstance();
+                    if(getIntent().getExtras().getBoolean("apartmentFlag"))
+                    {
+                        return Home_fragment.newInstance(selectedLocation,selectedStartPrice,selectedEndPrice,selectedStartDate,selectedEndDate,selectedBedRooms);
+                    }
+                    else
+                    {
+                        return Home_fragment.newInstance(selectedLocation,selectedStartPrice,selectedEndPrice,selectedStartDate,selectedEndDate);
+                    }
+
                 }
                 case 1:{
                     return Attending_fragment.newInstance(uid);

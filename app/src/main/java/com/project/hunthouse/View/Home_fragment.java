@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,6 +25,8 @@ import com.project.hunthouse.R;
 
 public class Home_fragment extends android.support.v4.app.Fragment {
 
+    private static final String ARG_PARAM1 = "param1";
+
     private static RecyclerView recyclerView;
 
     DatabaseReference childRef;
@@ -32,13 +35,38 @@ public class Home_fragment extends android.support.v4.app.Fragment {
 
     private OnFragmentInteractionListener mListener;
 
+    String location,startDate,endDate,startPrice,endPrice,bedRooms;
+    boolean apartmentFlag=false;
+
     public Home_fragment() {
         // Required empty public constructor
     }
-
-    public static Home_fragment newInstance() {
+                                            //int param1,
+    public static Home_fragment newInstance(String param2,String param3,String param4,String param5,String param6) {
         Home_fragment fragment = new Home_fragment();
         Bundle args = new Bundle();
+        //args.putInt(ARG_PARAM1, param1);
+        args.putString("selectedLocation", param2);
+        args.putString("selectedStartPrice",param3);
+        args.putString("selectedEndPrice",param4);
+        args.putString("selectedStartDate",param5);
+        args.putString("selectedEndDate",param6);
+        args.putBoolean("apartmentFlag",false);
+        fragment.setArguments(args);
+        return fragment;
+    }
+                                            //int param1,
+    public static Home_fragment newInstance(String param2,String param3,String param4,String param5,String param6,String param7) {
+        Home_fragment fragment = new Home_fragment();
+        Bundle args = new Bundle();
+        //args.putInt(ARG_PARAM1, param1);
+        args.putString("selectedLocation", param2);
+        args.putString("selectedStartPrice",param3);
+        args.putString("selectedEndPrice",param4);
+        args.putString("selectedStartDate",param5);
+        args.putString("selectedEndDate",param6);
+        args.putBoolean("apartmentFlag",true);
+        args.putString("selectedBedRooms",param7);
         fragment.setArguments(args);
         return fragment;
     }
@@ -54,6 +82,26 @@ public class Home_fragment extends android.support.v4.app.Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        if (getArguments() != null) {
+            location = getArguments().getString("selectedLocation");
+            startDate = getArguments().getString("selectedStartDate");
+            endDate = getArguments().getString("selectedEndDate");
+            startPrice = getArguments().getString("selectedStartPrice");
+            endPrice = getArguments().getString("selectedEndPrice");
+            if(getArguments().getBoolean("apartmentFlag"))
+            {
+                apartmentFlag=true;
+                bedRooms = getArguments().getString("selectedBedRooms");
+                Log.d("Home_Fragment:","BedRooms="+bedRooms);
+            }
+
+            Log.d("Home_Fragment:","Location from activity to fragment:"+location);
+            Log.d("Home_Fragment:","StartDate="+startDate);
+            Log.d("Home_Fragment:","EndDate="+endDate);
+            Log.d("Home_Fragment:","StartPrice="+startPrice);
+            Log.d("Home_Fragment:","EndPrice="+endPrice);
+        }
+
     }
 
     @Override
@@ -62,7 +110,8 @@ public class Home_fragment extends android.support.v4.app.Fragment {
         // Inflate the layout for this fragment
 
         final View view = inflater.inflate(R.layout.home_fragment, container, false);
-        childRef =  FirebaseDatabase.getInstance().getReference().child("houses").getRef();
+        Log.d("Inside Home_fragment:","before firebase instance\tLocation="+location);
+        childRef =  FirebaseDatabase.getInstance().getReference().child("houses").child(location).getRef();
 
         interfaceEventData = (InterfaceEventData) view.getContext();
         myFirebaseRecylerAdapter = new MyFirebaseRecylerAdapter(Event.class, R.layout.home_fragment_cardview,

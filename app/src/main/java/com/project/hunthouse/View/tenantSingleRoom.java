@@ -22,7 +22,7 @@ public class tenantSingleRoom extends AppCompatActivity implements View.OnClickL
     Calendar myCalendar;
     DatePickerDialog.OnDateSetListener date;
     Button cancel,search;
-    Spinner location;
+    EditText location;
     Intent intent;
     String selectedLocation,selectedStartDate,selectedEndDate,selectedStartPrice,selectedEndPrice;
     Bundle bundle;
@@ -47,7 +47,7 @@ public class tenantSingleRoom extends AppCompatActivity implements View.OnClickL
         endPrice  = (EditText) findViewById(R.id.rentEndEt);
         cancel    = (Button) findViewById(R.id.cancelBtn);
         search    = (Button) findViewById(R.id.searchBtn);
-        location = (Spinner) findViewById(R.id.tsrLocationSpinner);
+        location = (EditText) findViewById(R.id.tsrLocationSpinner);
 
         startDate.setOnClickListener(this);
         endDate.setOnClickListener(this);
@@ -97,7 +97,7 @@ public class tenantSingleRoom extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.searchBtn:
 
-                selectedLocation = location.getSelectedItem().toString();
+                selectedLocation = location.getText().toString();
                 selectedStartPrice = startPrice.getText().toString();
                 selectedEndPrice = endPrice.getText().toString();
                 selectedStartDate= startDate.getText().toString();
