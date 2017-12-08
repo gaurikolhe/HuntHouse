@@ -107,7 +107,7 @@ public class MyProfile extends AppCompatActivity {
                 });
             }
 
-            Intent intent = new Intent(MyProfile.this,Home.class);
+            Intent intent = new Intent(MyProfile.this,MainActivity.class);
             Bundle userData = new Bundle();
             userData.putString("name", uname);
             userData.putString("email", uemail);

@@ -13,6 +13,7 @@
         android:hint="Enter Email"
         android:inputType="textEmailAddress"
         android:layout_below="@+id/textView"
+        android:textColorHint="#fff"
         android:layout_centerHorizontal="true" />
 
     <EditText
@@ -24,7 +25,20 @@
         android:layout_marginTop="30dp"
         android:ems="10"
         android:hint="Enter Password"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:textColorHint="#fff" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to HuntHouse!"
+        android:textSize="30dp"
+        android:textColor="@color/colorWhite"
+        android:textStyle="italic"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp" />
 
     <TextView
         android:id="@+id/textView"
@@ -33,16 +47,19 @@
         android:text="CREATE NEW USER"
         android:textSize="20dp"
         android:textColor="@color/colorWhite"
-        android:textStyle="bold"
+        android:textStyle="italic"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="56dp" />
+        android:layout_marginTop="150dp" />
 
     <Button
         android:id="@+id/signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SIGN UP"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/pwd"
+        android:shadowColor="#666666"
         android:layout_centerVertical="true"
         android:layout_alignStart="@+id/textView"
         android:layout_alignEnd="@+id/textView" />
@@ -51,10 +68,10 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="54dp"
-        android:textColor="@color/colorWhite"
+        android:layout_marginTop="250dp"
+        android:textColor="#fff"
         android:textSize="20dp"
-        android:textStyle="bold"
+        android:textStyle="italic"
         android:text="ALREADY A USER?"
         android:layout_below="@+id/signup"
         android:layout_centerHorizontal="true" />
@@ -63,7 +80,7 @@
         android:id="@+id/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="23dp"
+        android:layout_marginTop="15dp"
         android:text="LOGIN"
         android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true" />

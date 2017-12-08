@@ -111,7 +111,7 @@ public class Home_fragment extends android.support.v4.app.Fragment {
 
         final View view = inflater.inflate(R.layout.home_fragment, container, false);
         Log.d("Inside Home_fragment:","before firebase instance\tLocation="+location);
-        childRef =  FirebaseDatabase.getInstance().getReference().child("houses").child(location).getRef();
+        childRef =  FirebaseDatabase.getInstance().getReference().child("houses").getRef(); //.child(location).
 
         interfaceEventData = (InterfaceEventData) view.getContext();
         myFirebaseRecylerAdapter = new MyFirebaseRecylerAdapter(Event.class, R.layout.home_fragment_cardview,
