@@ -142,7 +142,7 @@ public class Gallery_fragment extends Fragment {
             @Override
             public void onClick(View v) {
                 // Create a storage reference from our app
-                FirebaseStorage storage = FirebaseStorage.getInstance("gs://venyou-1ca06.appspot.com/");
+                FirebaseStorage storage = FirebaseStorage.getInstance("gs://househunt-e992c.appspot.com");
                 StorageReference storageRef = storage.getReference();
                 if (imageUri != null) {
                     Uri file = imageUri;

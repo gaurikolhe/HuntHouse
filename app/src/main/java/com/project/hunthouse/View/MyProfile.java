@@ -79,7 +79,7 @@ public class MyProfile extends AppCompatActivity {
 
     public void updateProfile(View view){
 
-            FirebaseStorage storage = FirebaseStorage.getInstance("gs://venyou-1ca06.appspot.com/");
+            FirebaseStorage storage = FirebaseStorage.getInstance("gs://househunt-e992c.appspot.com");
 
             // Create a storage reference from our app
             StorageReference storageRef = storage.getReference();

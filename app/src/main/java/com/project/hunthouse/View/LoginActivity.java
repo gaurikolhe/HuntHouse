@@ -27,7 +27,7 @@ import java.util.HashMap;
 
 import com.project.hunthouse.R;
 
-//import com.venyou.venyou.R;
+
 
 public class LoginActivity extends AppCompatActivity {
 

@@ -127,7 +127,7 @@ public class AddEvent extends AppCompatActivity {
             if(event_date != null) event.put("date",date);
             else event.put("date","2018-01-01 08:00");
 
-            FirebaseStorage storage = FirebaseStorage.getInstance("gs://venyou-1ca06.appspot.com/");
+            FirebaseStorage storage = FirebaseStorage.getInstance("gs://househunt-e992c.appspot.com");
 
             // Create a storage reference from our app
             StorageReference storageRef = storage.getReference();
