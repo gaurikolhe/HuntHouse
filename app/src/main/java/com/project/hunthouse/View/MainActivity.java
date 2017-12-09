@@ -178,7 +178,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             intent.putExtra("url",url);
             intent.putExtra("email",uemail);
             startActivity(intent);
-        } else if (id == R.id.logout) {
+        }else if (id == R.id.help) {
+            Intent intent = new Intent(getApplicationContext(), FabAndSnackbarActivity.class);
+            startActivity(intent);
+        }else if (id == R.id.customview) {
+
+            Intent intent = new Intent(getApplicationContext(), MyCustomView.class);
+            startActivity(intent);
+
+        }else if (id == R.id.logout) {
             FirebaseAuth.getInstance().signOut();
             Intent intent = new Intent(this,LoginActivity.class); startActivity(intent);
         }

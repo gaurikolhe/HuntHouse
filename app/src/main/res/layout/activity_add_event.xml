@@ -49,6 +49,7 @@
                 android:layout_below="@+id/taTxt0"
                 android:hint="Enter House Location"
                 android:textColorHint="#fff"
+                android:textColor="#fff"
                 android:layout_centerHorizontal="true"
                 android:id="@+id/addevent_name_text"/> <!--android:layout_toRightOf="@+id/addevent_name" -->
 
@@ -69,6 +70,7 @@
                 android:layout_below="@+id/addevent_name_text"
                 android:hint="Enter House Info"
                 android:textColorHint="#fff"
+                android:textColor="#fff"
                 android:layout_centerHorizontal="true"
                 android:id="@+id/addevent_desc_text"/>  <!-- android:layout_toRightOf="@+id/addevent_name" -->
 
@@ -89,6 +91,7 @@
                 android:layout_below="@+id/addevent_desc_text"
                 android:hint="Enter City"
                 android:textColorHint="#fff"
+                android:textColor="#fff"
                 android:layout_centerHorizontal="true"
                 android:id="@+id/addevent_city_text"/>  <!-- android:layout_toRightOf="@+id/addevent_name" -->
 
@@ -107,6 +110,7 @@
                 android:layout_height="wrap_content"
                 android:paddingTop="15dp"
                 android:textColorHint="#fff"
+                android:textColor="#fff"
                 android:layout_below="@+id/addevent_city_text"
                 android:hint="Enter State"
                 android:layout_centerHorizontal="true"
@@ -128,6 +132,7 @@
                 android:paddingTop="15dp"
                 android:layout_height="wrap_content"
                 android:textColorHint="#fff"
+                android:textColor="#fff"
                 android:layout_below="@+id/addevent_state_text"
                 android:id="@+id/addevent_venue_text"
                 android:hint="Enter Venue"
@@ -149,6 +154,7 @@
                 android:paddingTop="15dp"
                 android:layout_height="wrap_content"
                 android:textColorHint="#fff"
+                android:textColor="#fff"
                 android:layout_below="@+id/addevent_venue_text"
                 android:hint="Enter Street"
                 android:layout_centerHorizontal="true"
@@ -169,6 +175,7 @@
                 android:paddingTop="15dp"
                 android:layout_height="wrap_content"
                 android:textColorHint="#fff"
+                android:textColor="#fff"
                 android:layout_below="@+id/addevent_street_text"
                 android:hint="Enter Rent"
                 android:layout_centerHorizontal="true"
@@ -190,6 +197,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/addevent_fee_text"
                 android:textColorHint="#fff"
+                android:textColor="#fff"
                 android:hint="Enter Your Name"
                 android:layout_centerHorizontal="true"
                 android:id="@+id/addevent_host_text"/> <!-- android:layout_toRightOf="@+id/addevent_name" -->

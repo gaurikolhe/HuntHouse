@@ -12,6 +12,16 @@
             android:id="@+id/profile"
             android:icon="@drawable/ic_menu_manage"
             android:title="User Profile" />
+        <item
+            android:id="@+id/help"
+            android:icon="@drawable/map_icon"
+            android:title="Help" />
+
+        <item
+            android:id="@+id/customview"
+            android:icon="@drawable/map_icon"
+            android:title="Custom View" />
+
     </group>
 
     <item android:title="Logout">
