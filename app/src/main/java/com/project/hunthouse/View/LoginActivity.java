@@ -59,8 +59,7 @@ public class LoginActivity extends AppCompatActivity {
                 if(user!=null){
                     //user signed in
                     Log.d("AuthState","onAuthStateChanged: user signed in:"+user.getUid());
-                    //Intent myIntent = new Intent(LoginActivity.this, Home.class);  //Replace MainActivity.class with your launcher class from previous assignments
-                    Intent myIntent = new Intent(LoginActivity.this, MainActivity.class);
+                    Intent myIntent = new Intent(LoginActivity.this, MainActivity.class);  //Replace MainActivity.class with your launcher class from previous assignments
                     String name = user.getDisplayName();
                     String email = user.getEmail();
                     String id = user.getUid();
@@ -118,7 +117,7 @@ public class LoginActivity extends AppCompatActivity {
 
             // Successfully signed in
             if (resultCode == ResultCodes.OK) {
-                Intent myIntent = new Intent(LoginActivity.this, Home.class); //Replace MainActivity.class with your launcher class from previous assignments
+                Intent myIntent = new Intent(LoginActivity.this, MainActivity.class); //Replace MainActivity.class with your launcher class from previous assignments
                 LoginActivity.this.startActivity(myIntent);
                 return;
             } else {
