@@ -171,13 +171,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (id == R.id.map) {
             Intent intent = new Intent(getApplicationContext(), MapsActivity.class);
             startActivity(intent);
-        } else if (id == R.id.add_event) {
-            Intent intent = new Intent(MainActivity.this,AddEvent.class);
-            intent.putExtra("name",uname);
-            intent.putExtra("id",uid);
-            intent.putExtra("email",uemail);
-            startActivity(intent);
-        } else if (id == R.id.profile) {
+        }else if (id == R.id.profile) {
             Intent intent = new Intent(getApplicationContext(), MyProfile.class);
             intent.putExtra("name",uname);
             intent.putExtra("id",uid);

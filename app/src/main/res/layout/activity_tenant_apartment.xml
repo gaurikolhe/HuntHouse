@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#333333">
 
     <!--taTxt0 => Tenant Apartment TextView0  -->
     <TextView
@@ -12,7 +13,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
-        android:text="City:"/>
+        android:text="City:"
+        android:textSize="20dp"
+        android:textColor="#fff"/>
 
     <EditText
         android:id="@+id/taLocationSpinner"
@@ -20,6 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/taTxt0"
         android:layout_marginLeft="5dp"
+        android:textColor="#FFF"
         android:maxLength="30">
 
     </EditText> <!-- android:prompt="@string/location_prompt"
@@ -38,6 +42,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/line0"
         android:text="Montly Rental Rate:"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="5dp"/>
 
     <EditText
@@ -45,6 +52,7 @@
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/taTxt1"
+        android:textColor="#fff"
         android:layout_marginLeft="5dp"/>
 
     <TextView
@@ -54,10 +62,12 @@
         android:layout_toRightOf="@+id/rentStartET"
         android:layout_below="@+id/taTxt1"
         android:layout_marginTop="15dp"
-        android:text=" To "/>
+        android:text=" To "
+        android:textColor="#fff"/>
 
     <EditText
         android:id="@+id/rentEndEt"
+        android:textColor="#fff"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/taTxt2"
@@ -70,7 +80,8 @@
         android:layout_toRightOf="@+id/rentEndEt"
         android:layout_below="@+id/taTxt1"
         android:layout_marginTop="15dp"
-        android:text=" $ "/>
+        android:text=" $ "
+        android:textColor="#fff"/>
 
     <!-- Below code segment will draw horizontal line on the screen -->
     <TextView
@@ -85,7 +96,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Period of stay:"
+        android:textColor="#fff"
+        android:textSize="20dp"
         android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
         android:layout_below="@+id/line1"/>
 
     <EditText
@@ -93,8 +107,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
-        android:editable="false"
         android:hint="Start Date"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
         android:focusable="false"
         android:layout_below="@+id/taTxt3"
         android:layout_marginLeft="5dp"/>
@@ -113,7 +128,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
-        android:editable="false"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
         android:hint="End Date"
         android:focusable="false"
         android:layout_below="@+id/taTxt3"
@@ -130,8 +146,11 @@
         android:id="@+id/taTxt5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Number of Bed-Rooms:"
-        android:layout_marginLeft="5dp"
+        android:text="Availiable Rooms:"
+        android:textColor="#fff"
+        android:textSize="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
         android:layout_below="@+id/line2"/>
 
     <Spinner
@@ -139,8 +158,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/taTxt5"
-        android:layout_marginLeft="5dp"
+        android:layout_marginLeft="10dp"
+        android:background="#fff"
+        android:layout_marginTop="10dp"
         android:prompt="@string/bedroom_prompt"
+        android:textColor="#fff"
         android:entries="@array/bedroom_array"></Spinner>
 
     <Button
@@ -149,7 +171,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/startDateET"
         android:layout_alignParentLeft="true"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="150dp"
         android:text="Cancel"/>
 
     <Button
@@ -159,7 +181,7 @@
         android:layout_below="@+id/startDateET"
         android:layout_toRightOf="@+id/cancelBtn"
         android:text="Search"
-        android:layout_marginLeft="230dp"
-        android:layout_marginTop="250dp"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="150dp"
         />
     </RelativeLayout>

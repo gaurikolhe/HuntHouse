@@ -5,7 +5,7 @@
     <string name="open_drawer">Open Drawer</string>
     <string name="close_drawer">Close Drawer</string>
 
-    <string name="bedroom_prompt">Choose a no Bedrooms</string>
+    <string name="bedroom_prompt">No of Bedrooms</string>
     <string-array name="bedroom_array">
         <item>2</item>
         <item>3</item>
@@ -24,7 +24,7 @@
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
     <string name="tab_text_3">Tab 3</string>
-    <string name="title_activity_home">My HouseHunt</string>
+    <string name="title_activity_home">My HuntHouse</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="facebook_app_id">1688305614587284</string>
     <string name="fb_login_protocol_scheme">fb1688305614587284</string>
@@ -32,9 +32,9 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_event_details">EventDetails</string>
-    <string name="title_activity_add_event">AddEvent</string>
-    <string name="title_activity_my_profile">MyProfile</string>
+    <string name="title_activity_event_details">My Interest</string>
+    <string name="title_activity_add_event">Add Your House In HuntHouse</string>
+    <string name="title_activity_my_profile">My HuntHouse Profile</string>
     <string name="title_activity_maps">Map</string>
 
 
