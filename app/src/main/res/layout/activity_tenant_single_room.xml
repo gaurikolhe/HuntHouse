@@ -52,7 +52,8 @@ android:layout_height="match_parent"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tsrTxt1"
-        android:layout_marginLeft="5dp"/>
+        android:layout_marginLeft="5dp"
+        android:textColor="#fff"/>
 
     <TextView
         android:id="@+id/tsrTxt2"

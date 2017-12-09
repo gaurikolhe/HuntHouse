@@ -241,7 +241,7 @@
         android:layout_marginBottom="0dp"
         android:textColor="#fafafa"
         android:background="@android:drawable/dialog_holo_dark_frame"
-        android:text="Save for Later Review" />
+        android:text="Register" />
 
     <Button
         android:id="@+id/photoBox"
