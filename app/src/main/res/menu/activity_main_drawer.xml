@@ -8,24 +8,31 @@
             android:id="@+id/map"
             android:icon="@drawable/map_icon"
             android:title="Map" />
+
         <item
-            android:id="@+id/profile"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="User Profile" />
-        <item
-            android:id="@+id/help"
-            android:icon="@drawable/ic_feedback_black_24dp"
-            android:title="About HuntHouse" />
+            android:id="@+id/yournotes"
+            android:icon="@drawable/ic_note_add_black_24dp"
+            android:title="Add Notes" />
 
         <item
             android:id="@+id/customview"
             android:icon="@drawable/ic_pageview_black_24dp"
             android:title="Custom View" />
 
+        <item
+            android:id="@+id/help"
+            android:icon="@drawable/ic_feedback_black_24dp"
+            android:title="About US" />
+
     </group>
 
     <item android:title="Logout">
         <menu>
+            <item
+                android:id="@+id/profile"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="User Profile" />
+
             <item
                 android:id="@+id/logout"
                 android:icon="@drawable/logout"

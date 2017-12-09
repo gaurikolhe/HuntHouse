@@ -186,6 +186,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Intent intent = new Intent(getApplicationContext(), MyCustomView.class);
             startActivity(intent);
 
+        }else if (id == R.id.yournotes) {
+
+           Intent intent = new Intent(getApplicationContext(), MyTodoList.class);
+           startActivity(intent);
+
         }else if (id == R.id.logout) {
             FirebaseAuth.getInstance().signOut();
             Intent intent = new Intent(this,LoginActivity.class); startActivity(intent);
