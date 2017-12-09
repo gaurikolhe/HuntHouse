@@ -7,6 +7,8 @@
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorYellow">#F1C40F</color>
     <color name="squareColor">#3F51B5</color>
+    <color name="colorgray">#404040</color>
+    <color name="lightgray">#737373</color>
 <!--   Orignal colors -->
     <!--<color name="colorPrimary">#3F51B5</color>-->
     <!--<color name="colorPrimaryDark">#303F9F</color>-->
