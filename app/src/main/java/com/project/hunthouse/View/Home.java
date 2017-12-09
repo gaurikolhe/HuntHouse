@@ -96,6 +96,7 @@ public class Home extends AppCompatActivity implements Home_fragment.InterfaceEv
         textView_name.setText(uname);
         propic = (ImageView) view.findViewById(R.id.imageView); */
 
+        /*
         chat = (FloatingActionButton) findViewById(R.id.chat_fbutton);
         chat.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -105,6 +106,7 @@ public class Home extends AppCompatActivity implements Home_fragment.InterfaceEv
             }
         });
 
+        */
         addEvent = (FloatingActionButton) findViewById(R.id.addEvent_fbutton);
         addEvent.setOnClickListener(new View.OnClickListener() {
             @Override

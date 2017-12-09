@@ -115,12 +115,12 @@ public class EventDetails extends AppCompatActivity {
 //        time.setText("Time : " + (String) eventDetails.get("time"));
         city.setText("City : " + (String) eventDetails.get("city"));
         state.setText("State : " + (String) eventDetails.get("state"));
-        venue.setText("Venue : " + (String) eventDetails.get("venue"));
+        venue.setText("House : " + (String) eventDetails.get("venue"));
         street.setText("Street : " + (String) eventDetails.get("street"));
-        fee.setText("Fee : " + (String) eventDetails.get("fee") + "$");
+        fee.setText("Rent : " + (String) eventDetails.get("fee") + "$");
         description.setText((String) eventDetails.get("description"));
         makePayment.setText("Pay : " + (String) eventDetails.get("fee") + "$");
-        host.setText("Host : " + (String) eventDetails.get("host_name"));
+        host.setText("Owner : " + (String) eventDetails.get("host_name"));
         host_rating = (String) eventDetails.get("host_rating");
         rating = Float.parseFloat(host_rating);
         ratingBar.setRating(rating);
