@@ -54,7 +54,8 @@
             android:name="com.project.hunthouse.View.MyProfile"
             android:label="@string/title_activity_my_profile"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name="com.project.hunthouse.View.FabAndSnackbarActivity" />
+        <activity android:name="com.project.hunthouse.View.FabAndSnackbarActivity"
+            android:label="About Hunt House"/>
         <activity android:name="com.project.hunthouse.View.MyCustomView" />
 
         <activity android:name="com.project.hunthouse.View.ChatActivity"

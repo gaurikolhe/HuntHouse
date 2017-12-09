@@ -14,12 +14,12 @@
             android:title="User Profile" />
         <item
             android:id="@+id/help"
-            android:icon="@drawable/map_icon"
-            android:title="Help" />
+            android:icon="@drawable/ic_feedback_black_24dp"
+            android:title="About HuntHouse" />
 
         <item
             android:id="@+id/customview"
-            android:icon="@drawable/map_icon"
+            android:icon="@drawable/ic_pageview_black_24dp"
             android:title="Custom View" />
 
     </group>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <RelativeLayout android:layout_height="match_parent" android:layout_width="match_parent" android:id="@+id/activity_main" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.project.hunthouse.View.CustomView android:layout_height="350dp" android:layout_width="match_parent" android:id="@+id/customView" app:square_size="@dimen/square_size" app:square_color="@color/squareColor"/>
+
+    <Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/btn_swap_color" android:text="SWAP COLOR" android:layout_below="@+id/customView"/>
+
+
+
+</RelativeLayout>

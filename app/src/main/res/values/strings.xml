@@ -37,6 +37,15 @@
     <string name="title_activity_add_event">Add Your House In HuntHouse</string>
     <string name="title_activity_my_profile">My HuntHouse Profile</string>
     <string name="title_activity_maps">Map</string>
+    <string name="sample_string">HuntHouse is the leading real estate and rental marketplace dedicated to empowering consumers with data,
+inspiration and knowledge around the place they call home, and connecting them with the best local professionals who can help.
+
+HuntHouse serves the full lifecycle of owning and living in a home: buying, selling, renting, financing, remodeling and more. It starts with
+        HuntHouse living database of more than 100 U.S. homes - including homes for sale, homes for rent and homes not currently on the market, as well as Zestimate home values, Rent Zestimates and other home-related information. HuntHouse operates the most popular suite of mobile real estate apps, with more than two dozen apps across all major platforms.
+HuntHouse is the leading real estate and rental marketplace dedicated to empowering consumers with data,
+inspiration and knowledge around the place they call home, and connecting them with the best local professionals who can help.
+
+HuntHouse launched in 2017 and is headquartered in Syracuse.</string>
 
 
 </resources><!--<string name="facebook_app_id">1909920709023142</string>--><!--<string name="fb_login_protocol_scheme">fb1909920709023142</string>-->
