@@ -4,6 +4,7 @@
     <!-- Vishal (Start)-->
     <string name="open_drawer">Open Drawer</string>
     <string name="close_drawer">Close Drawer</string>
+    <string name="location_shortcut_short_label1">Location</string>
 
     <string name="bedroom_prompt">Choose a no Bedrooms</string>
     <string-array name="bedroom_array">
